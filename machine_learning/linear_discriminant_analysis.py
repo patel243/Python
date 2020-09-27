@@ -41,11 +41,9 @@
 
     Author: @EverLookNeverSee
 """
-
 from math import log
 from os import name, system
-from random import gauss
-from random import seed
+from random import gauss, seed
 
 
 # Make a training dataset drawn from a gaussian distribution
@@ -155,7 +153,7 @@ def calculate_variance(items: list, means: list, total_count: int) -> float:
 def predict_y_values(
     x_items: list, means: list, variance: float, probabilities: list
 ) -> list:
-    """ This function predicts new indexes(groups for our data)
+    """This function predicts new indexes(groups for our data)
     :param x_items: a list containing all items(gaussian distribution of all classes)
     :param means: a list containing real mean values of each class
     :param variance: calculated value of variance by calculate_variance function
