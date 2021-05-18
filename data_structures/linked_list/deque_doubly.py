@@ -9,7 +9,7 @@ Operations:
 
 
 class _DoublyLinkedBase:
-    """ A Private class (to be inherited) """
+    """A Private class (to be inherited)"""
 
     class _Node:
         __slots__ = "_prev", "_data", "_next"
@@ -20,8 +20,8 @@ class _DoublyLinkedBase:
             self._next = link_n
 
         def has_next_and_prev(self):
-            return " Prev -> {0}, Next -> {1}".format(
-                self._prev is not None, self._next is not None
+            return (
+                f" Prev -> {self._prev is not None}, Next -> {self._next is not None}"
             )
 
     def __init__(self):
@@ -112,7 +112,7 @@ class LinkedDeque(_DoublyLinkedBase):
            ...
         IndexError: remove_first from empty list
         >>> d.add_first('A') # doctest: +ELLIPSIS
-        <linked_list.deque_doubly.LinkedDeque object at ...
+        <data_structures.linked_list.deque_doubly.LinkedDeque object at ...
         >>> d.remove_first()
         'A'
         >>> d.is_empty()
@@ -132,7 +132,7 @@ class LinkedDeque(_DoublyLinkedBase):
            ...
         IndexError: remove_first from empty list
         >>> d.add_first('A') # doctest: +ELLIPSIS
-        <linked_list.deque_doubly.LinkedDeque object at ...
+        <data_structures.linked_list.deque_doubly.LinkedDeque object at ...
         >>> d.remove_last()
         'A'
         >>> d.is_empty()
